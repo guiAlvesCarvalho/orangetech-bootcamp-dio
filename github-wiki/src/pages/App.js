@@ -36,6 +36,7 @@ function App() {
   return (
     <Container>
      <img src={gitHubLogo} width={72} height={72} alt="github logo"  />
+     <h2>Tente meu repositório deste bootcamp: <i>guiAlvesCarvalho/orangetech-bootcamp-dio</i></h2>
      <Input value={currentRepo} onChange={(e) => setCurrentRepo(e.target.value)} />
      <Button onClick={handleSearchRepo}/>
      {repos.map(repo => <ItemRepo handleRemoveRepo={handleRemoveRepo} repo={repo}/>)}

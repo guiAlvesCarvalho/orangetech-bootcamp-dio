@@ -9,4 +9,8 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+
+    h2 {
+        margin-top: 15px;
+    }
 `
