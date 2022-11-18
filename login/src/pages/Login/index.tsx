@@ -28,6 +28,13 @@ const Login = () => {
     reValidateMode: "onChange",
   });
 
+  if(isValid === false){
+    document.querySelector('button')?.setAttribute('disabled' , 'disabled');
+  }
+  else{
+    document.querySelector('button')?.removeAttribute('disabled');
+  }
+
   return (
     <Container>
       <LoginContainer>
