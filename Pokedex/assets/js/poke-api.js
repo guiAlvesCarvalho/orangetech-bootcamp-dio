@@ -1,7 +1,7 @@
 
 const pokeApi = {}
 
-function convertPokeApiDetailToPokemon(pokeDetail) {
+function convertPokeAPIDetailToPokemon(pokeDetail) {
     const pokemon = new Pokemon()
     pokemon.number = pokeDetail.id
     pokemon.name = pokeDetail.name
@@ -14,13 +14,20 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
 
     pokemon.photo = pokeDetail.sprites.other.home.front_default
 
+    pokemon.species = pokeDetail.species.name;
+    pokemon.height = pokeDetail.height;
+    pokemon.weight = pokeDetail.weight;
+    
+    pokemon.abilities = pokeDetail.abilities
+        .map((abilities => abilities.ability.name));
+
     return pokemon
 }
 
 pokeApi.getPokemonDetail = (pokemon) => {
     return fetch(pokemon.url)
     .then((response) => response.json())
-    .then(convertPokeApiDetailToPokemon)
+    .then(convertPokeAPIDetailToPokemon)
 }
 
 pokeApi.getPokemons = (offset, limit) => {
@@ -32,4 +39,12 @@ pokeApi.getPokemons = (offset, limit) => {
         .then((pokemons) => pokemons.map(pokeApi.getPokemonDetail))
         .then((detailRequests) => Promise.all(detailRequests))
         .then((pokemonsDetails) => pokemonsDetails)
+}
+
+pokeApi.getPokemonByName = (name) => {
+    const url = `https://pokeapi.co/api/v2/pokemon/${name}`;
+    return fetch(url)
+        .then((response) => response.json())
+        .then(convertPokeAPIDetailToPokemon)
+        .catch((e) => alert('Pokemon não encontrado!'));
 }

@@ -5,61 +5,79 @@
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
+    box-shadow: 3px 3px rgb(116, 116, 116);
 }
 
 .normal {
-    background-color:#a6a877;
-} 
+    background-image: linear-gradient(130deg, #a6a877, #76775e);
+}
+
 .grass {
-    background-color: #77c850;
+    background-image: linear-gradient(130deg, #77c850, #5c9b40);
 }
+
 .fire {
-    background-color: #ee7f30;
+    background-image: linear-gradient(130deg, #ee7f30, #a86433);
 }
+
 .water {
-    background-color: #678fee;
+    background-image: linear-gradient(130deg, #678fee, #5c79bb);
 }
+
 .electric {
-    background-color: #f7cf2e;
+    background-image: linear-gradient(130deg, #f7cf2e, #ddbf45);
 }
+
 .ice {
-    background-color: #98d5d7;
+    background-image: linear-gradient(130deg, #98d5d7, #779d9e);
 }
+
 .ground {
-    background-color: #dfbf69;
+    background-image: linear-gradient(130deg, #dfbf69, #bea768);
 }
+
 .flying {
-    background-color: #a98ff0;
+    background-image: linear-gradient(130deg, #a98ff0, #8c7eb2);
 }
+
 .poison {
-    background-color: #a040a0;
+    background-image: linear-gradient(130deg, #a040a0, #8d528d);
 }
+
 .fighting {
-    background-color: #bf3029;
+    background-image: linear-gradient(130deg, #bf3029, #a13631);
 }
+
 .psychic {
-    background-color: #f65687;
+    background-image: linear-gradient(130deg, #f65687, #c65778);
 }
+
 .dark {
-    background-color: #725847;
+    background-image: linear-gradient(130deg, #725847, #5a4a3f);
 }
+
 .rock {
-    background-color: #b8a137;
+    background-image: linear-gradient(130deg, #b8a137, #978535);
 }
+
 .bug {
-    background-color: #a8b720;
+    background-image: linear-gradient(130deg, #a8b720, #777f2e);
 }
+
 .ghost {
-    background-color: #6e5896;
+    background-image: linear-gradient(130deg, #6e5896, #55496b);
 }
+
 .steel {
-    background-color: #b9b7cf;
+    background-image: linear-gradient(130deg, #b9b7cf, #a5a5a9);
 }
+
 .dragon {
-    background-color: #6f38f6;
+    background-image: linear-gradient(130deg, #6f38f6, #5c39b4);
 }
+
 .fairy {
-    background-color: #f9aec7;
+    background-image: linear-gradient(130deg, #f9aec7, #c492a2);
 }
 
 .pokemon .number {
@@ -104,6 +122,11 @@
     height: 110px;
     align-self: flex-end;
     margin-top: -40px;
+}
+
+.pokemon .detail img:hover {
+    transform: scale(1.3);
+    cursor: pointer;
 }
 
 .pagination {

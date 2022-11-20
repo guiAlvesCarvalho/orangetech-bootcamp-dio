@@ -17,11 +17,14 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/pokedex.css">
+    <link rel="stylesheet" href="./assets/css/details.css">
 </head>
 <body>
     
     <section class="content">
         <h1>Pokedex</h1>
+        <h3>Feito por Guilherme Alves de Carvalho</h3>
+        <a href="https://www.linkedin.com/in/guialvescarvalho/:"><h4>LinkedIn</h4></a>
 
         <ol id="pokemonList" class="pokemons">
             <!-- ...... Pokemons here ....... -->
@@ -34,6 +37,30 @@
         </div>
 
     </section>
+
+    
+    <!-- POKEMON DETAILS -->
+    <div id="modal-overlay">
+        <div id="modal">
+            <div>
+                <h2></h2>
+                <span id="number"></span>
+            </div>
+            <img src="" alt="">
+            <img id="background-img" src="assets/img/background_modal.svg" alt="">
+            <div class="details">
+                <span id="species"></span>
+                <span id="height"></span>
+                <span id="weight"></span>
+                <span id="abilities">Abilities: </span>
+            </div>
+            <button type="button" onclick="modalToggle()">
+                <img src="assets/img/arrow.svg" alt="back" />
+            </button>
+        </div>
+    </div>
+
+
     <script src="./assets/js/pokemon-model.js"></script>
     <script src="./assets/js/poke-api.js"></script>
     <script src="./assets/js/main.js"></script>
